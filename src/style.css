@@ -1,0 +1,1080 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Global */
+body {
+  font-family: 'Poppins', sans-serif;
+  color:white;
+  background:#f7f7f7;
+  line-height:1.5;
+}
+.hello {
+  background: url("public/assets/10-best-bedroom-furniture-design-ideas-f.jpg"); /* change to your image path */
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end; /* text right me */
+  align-items: center;
+  padding: 0 80px;
+}
+
+.text {
+  background-color: rgba(50, 50, 50, 0.6); /* Dark grey, semi-transparent */
+  padding: 60px;
+  border-radius: 20px;
+  max-width: 800px;
+  color: white;
+  text-align: left;
+}
+
+.text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.text p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.text button {
+  background-color: #c49b77;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.text button:hover {
+  background-color: #a97e5f;
+}
+
+
+
+/* Header */
+.header { background:#fff; border-bottom:1px solid #eee; padding:14px 0; }
+.header-content { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+
+/* Logo */
+.logo { font-size:22px; font-weight:600; color:#111; }
+
+/* Nav */
+.nav ul { list-style:none; display:flex; gap:22px; }
+.nav ul li a { text-decoration:none; color:#333; font-weight:500; }
+.nav ul li a:hover { color:#c47b2b; }
+
+/* Icons */
+.icons { display:flex; gap:12px; font-size:18px; }
+
+/* Hamburger for mobile */
+.hamburger { display:none; cursor:pointer; font-size:22px; }
+
+/* Responsive */
+@media (max-width:768px) {
+  .nav { display:none; position:absolute; top:64px; left:0; right:0; background:#fff; padding:16px; border-top:1px solid #eee; }
+  .nav ul { flex-direction:column; gap:12px; }
+  .nav.active { display:block; }
+  .hamburger { display:block; }
+}
+
+.hero {
+  height: 100vh; /* full screen height */
+  background: url("public\assets\minimalist-aesthetic-room-comfy-chair-wooden-bookshelf-white-wall-background-minimalist-aesthetic-room-comfy-285288840.webp") 
+              no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff; /* make text white for contrast */
+  text-align: center;
+  position: relative;
+}
+
+/* Add an overlay for better readability */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4); /* dark overlay */
+}
+
+.hero-content {
+  position: relative; /* keep text above overlay */
+  z-index: 1;
+}
+
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #eab308;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #c47b2b;
+}
+
+/* ---------------- Products Section ---------------- */
+/* ---------------- Products Section ---------------- */
+.products {
+  padding: 60px 20px;
+  background: #f9f9f9;
+  overflow-x: auto;       /* allow horizontal scroll if needed */
+  white-space: nowrap;     /* keep all items in one line */
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.product-grid {
+  display: flex;
+  gap: 25px;
+  flex-wrap: nowrap;      /* no wrapping */
+  padding-bottom: 10px;   /* space for scrollbar */
+  scroll-behavior: smooth; /* smooth scrolling */
+}
+
+.product-card {
+  flex: 0 0 250px;        /* fixed width for each card */
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;           /* fixed height for uniform cards */
+  object-fit: cover;       /* crop nicely */
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.product-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.product-card .desc {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 8px;
+}
+
+.product-card .price {
+  color: #b88e2f;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.product-card .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #c19a6b;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.product-card .btn:hover {
+  background: #a67a50;
+}
+
+/* Optional: hide scrollbar for cleaner look */
+.product-grid::-webkit-scrollbar {
+  height: 8px;
+}
+
+.product-grid::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.2);
+  border-radius: 4px;
+}
+
+.product-grid::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+/* ---------------- Inspiration Section ---------------- */
+.inspiration {
+  padding: 80px 20px;
+  background: #f9f9f9;
+}
+
+.insp-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.insp-text {
+  flex: 1 1 350px;
+}
+
+.insp-text h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.insp-text p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 25px;
+  line-height: 1.6;
+  max-width: 400px;
+}
+
+.insp-gallery {
+  display: flex;
+  gap: 20px;
+  flex: 1 1 500px;
+}
+
+.insp-large img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.insp-small {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.insp-small img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.product-card .desc {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 8px;
+}
+
+/* -------------- Browse The Range -------------- */
+.browse-range {
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.browse-range .section-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.9rem;
+  font-weight: 600;
+}
+
+.range-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: stretch;
+}
+
+/* Card */
+.range-card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(2,6,23,0.06);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  text-decoration: none;
+  color: inherit;
+  height: 260px;
+}
+
+.range-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1);
+  transition: transform 0.6s ease;
+}
+
+/* dark overlay with title */
+.range-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 18px;
+  background: linear-gradient(to top, rgba(0,0,0,0.45), rgba(0,0,0,0.05));
+}
+
+.range-overlay h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* hover effect */
+.range-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 30px rgba(2,6,23,0.10);
+}
+.range-card:hover img {
+  transform: scale(1.06);
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .range-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 520px) {
+  .range-grid { grid-template-columns: 1fr; }
+  .range-card { height: 220px; }
+}
+
+.btn-center { text-align: center; margin-top: 20px; }
+
+/* Hashtag Section */
+.furniro-tag {
+  padding: 60px 20px;
+  background: #fff;
+  text-align: center;
+}
+.furniro-tag .tag-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+.furniro-tag img { width: 100%; border-radius: 10px; }
+
+/* Footer */
+.footer {
+  background: #fafafa;
+  padding: 40px 20px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+.footer h4 { margin-bottom: 12px; font-weight: 600; }
+.footer input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 8px;
+  border-radius: 6px;
+}
+.footer-bottom {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* -------- Footer styling--*/
+footer {
+  background: #f9f9f9;
+  padding: 50px 20px 20px;
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-logo {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.footer-desc {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.footer-links h4,
+.footer-newsletter h4 {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.footer-links a {
+  display: block;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #000;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #b68b2c;
+}
+
+.footer-newsletter form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-newsletter input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.footer-newsletter button {
+  padding: 8px 16px;
+  background: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.footer-newsletter button:hover {
+  background: #b68b2c;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #ddd;
+  padding-top: 15px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Shop Banner */
+.shop-banner {
+  background: url("public/assets/10-best-bedroom-furniture-design-ideas-f.jpg");
+  
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.shop-banner h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.shop-banner p {
+  font-size: 1.2rem;
+}
+
+/* Product Grid */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;         /* keeps all images same height */
+  object-fit: cover;     /* crops nicely */
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.product-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.product-card .desc {
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.product-card .price {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #c19a6b;
+}
+
+.product-card .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #c19a6b;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.product-card .btn:hover {
+  background: #a67a50;
+}
+
+/* Features Section */
+.features {
+  background-color: #fdf4e3; /* soft yellow/cream */
+  padding: 40px 20px;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1 1 250px;
+}
+
+.feature-item img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.feature-item h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  color: #000;
+}
+
+.feature-item p {
+  font-size: 14px;
+  color: #555;
+  margin: 3px 0 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+.product {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 40px;
+}
+
+.product img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+}
+
+.details {
+  flex: 1;
+}
+
+.details h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.details p {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #c19a6b;
+  margin: 15px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #c19a6b;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #a67a50;
+}
+
+/* Related products */
+.related h2 {
+  margin-bottom: 20px;
+}
+
+.related-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.product-card h3 {
+  margin: 10px 0 5px;
+}
+
+.product-card p {
+  margin: 5px 0;
+  color: #666;
+}
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+  background: #f8f8f8;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.nav-links a.active {
+  color: goldenrod;
+}
+
+/* Banner */
+.contact-banner {
+  text-align: center;
+  padding: 50px;
+  background: url('public\assets\10-best-bedroom-furniture-design-ideas-f.jpg') center/cover no-repeat;
+  color: #333;
+}
+
+.contact-banner h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* Contact Section */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 50px 10%;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-info h2 {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.info-box {
+  margin: 20px 0;
+}
+
+.contact-form {
+  flex: 1;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+
+.contact-form button {
+  padding: 12px;
+  background: goldenrod;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.contact-form button:hover {
+  background: darkgoldenrod;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #f8f8f8;
+  margin-top: 30px;
+}
+
+.contact-banner {
+  text-align: center;
+  padding: 80px 20px;
+  background: url("public/assets/10-best-bedroom-furniture-design-ideas-f.jpg");;
+  color: #333;
+}
+
+/* General */
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+.rose {
+  text-align: center;
+  padding: 30px;
+  background: #f8f8f8;
+  border-bottom: 2px solid #eee;
+}
+
+/* Layout */
+.tulip {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  padding: 40px 10%;
+}
+
+/* Blog Posts */
+.sunflower {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.daisy {
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.daisy img {
+  width: 100%;
+  height: auto;
+}
+
+.lily {
+  padding: 20px;
+}
+
+.lily h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.lily p {
+  margin-bottom: 15px;
+}
+
+.orchid {
+  text-decoration: none;
+  color: goldenrod;
+  font-weight: bold;
+}
+
+/* Pagination */
+.lavender {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.lavender a {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  text-decoration: none;
+  color: #333;
+  border-radius: 4px;
+}
+
+.lavender a:hover {
+  background: goldenrod;
+  color: #fff;
+}
+
+/* Sidebar */
+.peony {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.iris input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.camellia h3,
+.marigold h3 {
+  margin-bottom: 10px;
+}
+
+.camellia ul,
+.marigold ul {
+  list-style: none;
+  padding: 0;
+}
+
+.camellia ul li,
+.marigold ul li {
+  margin: 8px 0;
+}
+
+.camellia ul li a,
+.marigold ul li a {
+  text-decoration: none;
+  color: #555;
+}
+
+.camellia ul li a:hover,
+.marigold ul li a:hover {
+  color: goldenrod;
+}
+/* paste at bottom of src/style.css */
+.cart-sidebar { 
+  transition: transform 220ms ease;
+}
+
+/* basic button style if you use .btn in project */
+.btn {
+  display:inline-block;
+  padding:8px 12px;
+  background:#0a84ff;
+  color:white;
+  border-radius:6px;
+  text-decoration:none;
+}
+
+/* simple header layout fixes (optional) */
+.header .icons { display:flex; gap:12px; align-items:center; }
+
+/* Full-screen background with centered content */
+.login-page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1920&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Glassy card design */
+.login-container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 40px 35px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 35px rgba(0, 0, 0, 0.4);
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Input styling */
+.login-container input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.85);
+  color: #333;
+  transition: 0.3s;
+}
+
+.login-container input:focus {
+  background: white;
+  box-shadow: 0 0 5px #facc15;
+}
+
+/* Button styling */
+.login-container button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  background-color: #facc15;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-container button:hover {
+  background-color: #eab308;
+}
+
+/* Toggle link */
+.login-container p {
+  margin-top: 15px;
+  color: #f1f1f1;
+}
+
+.login-container span {
+  color: #fde047;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.login-container span:hover {
+  color: #fff;
+}
