@@ -1,4 +1,5 @@
 # FurniRo – E-commerce Marketplace
+![Home Page](home.png)
  
 
 FurniRo is a modern **furniture e-commerce platform** built with **ReactJS**.  
@@ -9,6 +10,7 @@ This project is designed as a **learning project** for anyone who wants to explo
 ---
 
 ## 🌟 Features
+![login page](login.png)
 
 - **Home Page** – Welcome users with a beautiful banner and featured products.  
 - **Shop Page** – Browse a wide collection of furniture items.  
