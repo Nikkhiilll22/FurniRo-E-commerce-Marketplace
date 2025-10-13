@@ -1,4 +1,5 @@
-# FurniRo – E-commerce Marketplace
+# FurniRo – E-commerce Marketplace [Live Preview](https://funiroo.netlify.app/)
+
 ![Home Page](home.png)
  
 
