@@ -4,7 +4,7 @@
  
 
 FurniRo is a modern **furniture e-commerce platform** built with **ReactJS**.  
-It features a **product catalog, product details, shopping cart, login/signup system**, and a **responsive UI** with a sleek, centered login page.
+It features a **product catalog, product details, shopping cart, login/signup system, Blog, Conact us** and a **responsive UI** with a sleek, centered login page.
 
 This project is designed as a **learning project** for anyone who wants to explore **React development, component structure, routing, and localStorage-based authentication**.
 
